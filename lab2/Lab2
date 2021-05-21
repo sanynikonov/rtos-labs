@@ -1,0 +1,48 @@
+#include "main.h"
+
+#ifdef STRUCTS
+
+#include "stm32f10x.h"
+
+void delay(uint32_t ms)
+{
+	for(uint32_t i = 0; i < ms; i++)
+		for(uint32_t j = 0; j < 10000; j++) {}
+}
+
+void run(int GPIOAWorkTime, int GPIOBWorkTime, int period)
+{	
+	GPIOA->BSRR |= GPIO_BSRR_BS4;											//Set GPIOA 4 pin
+	GPIOB->BSRR |= GPIO_BSRR_BS12;											//Set GPIOB 12 pin
+	
+	delay(GPIOBWorkTime);
+	GPIOB->BRR |= GPIO_BRR_BR12;										//Reset GPIOB 12 pin
+	
+	delay(GPIOAWorkTime - GPIOBWorkTime);
+	GPIOA->BRR |= GPIO_BRR_BR4;											//Reset GPIOA 4 pin
+	
+	delay(period - GPIOAWorkTime);
+}
+
+int main()
+{
+	RCC->APB2ENR|= RCC_APB2ENR_IOPAEN;										//Enable GPIOA clock
+	RCC->APB2ENR|= RCC_APB2ENR_IOPBEN;										//Enable GPIOB clock
+	 
+	GPIOA->CRL |= (GPIO_CRL_MODE4_0 | GPIO_CRL_MODE4_1);					//50 MHz out mode for GPIOA4
+	GPIOA->CRL &= ~GPIO_CRL_CNF4;											//Push&Pull
+	
+	GPIOB->CRH |= (GPIO_CRH_MODE12_0 | GPIO_CRH_MODE12_1);					//50 MHz out mode GPIOB12
+	GPIOB->CRH &= ~GPIO_CRH_CNF12;											//Push&Pull
+	
+	int period = 20;																					//20 ms period
+	int GPIOAWorkTime = 15;																		//15 ms GPIOA4
+	int GPIOBWorkTime = 10;																		//10 ms GPIOB12
+
+	while(1)
+	{
+		run(GPIOAWorkTime, GPIOBWorkTime, period);
+	}
+}
+
+#endif

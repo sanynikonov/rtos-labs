@@ -1,0 +1,539 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.33.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Maksym SnizhokMA, KPI, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.33.0.0
+Toolchain Path:  C:\Program Files\Keil\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.15
+Assembler:       Armasm.exe V6.15
+Linker/Locator:  ArmLink.exe V6.15
+Library Manager: ArmAr.exe V6.15
+Hex Converter:   FromElf.exe V6.15
+CPU DLL:         SARMCM3.DLL V5.33.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      UL2CM3.DLL V1.163.9.0
+Dialog DLL:      TCM.DLL V1.48.0.0
+ 
+<h2>Project:</h2>
+D:\Files\Documents\lab3\lab3.uvprojx
+Project File Date:  05/13/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.15', folder: 'C:\Program Files\Keil\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+compiling RTX_Conf_CM.c...
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/CMSIS/RTOS2/FreeRTOS/Source/ARM/clib_arm.c(26): warning: In file included from...
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/include\FreeRTOS.h(1199): warning: padding struct 'struct xSTATIC_QUEUE' with 1 byte to align 'uxDummy8' [-Wpadded]
+                UBaseType_t uxDummy8;
+                            ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/include\FreeRTOS.h(1176): warning: padding size of 'struct xSTATIC_QUEUE' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct xSTATIC_QUEUE
+               ^
+2 warnings generated.
+compiling clib_arm.c...
+main.c(41): warning: function 'PWM1' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+main.c(52): warning: function 'PWM2' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+main.c(72): warning: implicit conversion loses integer precision: 'unsigned int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+        timer.TIM_Prescaler = SystemCoreClock/10000 - 1;                                                                
+                            ~ ~~~~~~~~~~~~~~~~~~~~~~^~~
+main.c(1): warning: In file included from...
+./main.h(1): warning: In file included from...
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(8302): warning: In file included from...
+./RTE/Device/STM32F103C8\stm32f10x_conf.h(87): warning: In file included from...
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc\stm32f10x_tim.h(51): warning: padding size of 'TIM_TimeBaseInitTypeDef' with 1 byte to alignment boundary [-Wpadded]
+typedef struct
+        ^
+4 warnings generated.
+compiling main.c...
+compiling os_systick.c...
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver/GPIO_STM32F10x.c(10): warning: In file included from...
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver/GPIO_STM32F10x.h(230): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  return (GPIOx->IDR);
+  ~~~~~~  ~~~~~~~^~~
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver/GPIO_STM32F10x.c(112): warning: integer constant not in range of enumerated type 'GPIO_CONF' [-Wassign-enum]
+      conf &= ~1;
+              ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver/GPIO_STM32F10x.c(124): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  *reg &= ~(0xF << (num << 2));
+       ~~ ^~~~~~~~~~~~~~~~~~~~
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver/GPIO_STM32F10x.c(125): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  *reg |= ((conf << 2) | mode) << (num << 2);
+       ~~ ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+4 warnings generated.
+compiling GPIO_STM32F10x.c...
+assembling startup_stm32f10x_md.s...
+RTE/Device/STM32F103C8/system_stm32f10x.c(167): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+            ^
+RTE/Device/STM32F103C8/system_stm32f10x.c(167): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+    ^
+1 warning generated.
+compiling system_stm32f10x.c...
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/src/misc.c(132): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+    NVIC->IP[NVIC_InitStruct->NVIC_IRQChannel] = tmppriority;
+                                               ~ ^~~~~~~~~~~
+1 warning generated.
+compiling misc.c...
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/CMSIS/RTOS2/FreeRTOS/Source/cmsis_os2.c(29): warning: In file included from...
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/include\FreeRTOS.h(1112): warning: padding size of 'struct xSTATIC_TCB' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct xSTATIC_TCB
+               ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/CMSIS/RTOS2/FreeRTOS/Source/cmsis_os2.c(523): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+      default:         state = osThreadError;      break;
+      ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/CMSIS/RTOS2/FreeRTOS/Source/cmsis_os2.c(581): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    taskYIELD();
+               ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/CMSIS/RTOS2/FreeRTOS/Source/cmsis_os2.c(30): warning: In file included from...
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/include/task.h(143): warning: padding struct 'struct xTASK_STATUS' with 3 bytes to align 'uxCurrentPriority' [-Wpadded]
+        UBaseType_t uxCurrentPriority;  /* The priority at which the task was running (may be inherited) when the structure was populated. */
+                    ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/include/task.h(137): warning: padding size of 'struct xTASK_STATUS' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct xTASK_STATUS
+               ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/CMSIS/RTOS2/FreeRTOS/Source/cmsis_os2.c(721): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+      portYIELD_FROM_ISR (yield);
+                                ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/CMSIS/RTOS2/FreeRTOS/Source/cmsis_os2.c(29): warning: In file included from...
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/include\FreeRTOS.h(1249): warning: padding size of 'struct xSTATIC_TIMER' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct xSTATIC_TIMER
+               ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/include\FreeRTOS.h(1220): warning: padding size of 'struct xSTATIC_EVENT_GROUP' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct xSTATIC_EVENT_GROUP
+               ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/CMSIS/RTOS2/FreeRTOS/Source/cmsis_os2.c(1145): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+      portYIELD_FROM_ISR (yield);
+                                ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/CMSIS/RTOS2/FreeRTOS/Source/cmsis_os2.c(29): warning: In file included from...
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/include\FreeRTOS.h(1199): warning: padding struct 'struct xSTATIC_QUEUE' with 1 byte to align 'uxDummy8' [-Wpadded]
+                UBaseType_t uxDummy8;
+                            ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/include\FreeRTOS.h(1176): warning: padding size of 'struct xSTATIC_QUEUE' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct xSTATIC_QUEUE
+               ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/CMSIS/RTOS2/FreeRTOS/Source/cmsis_os2.c(1579): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        portYIELD_FROM_ISR (yield);
+                                  ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/CMSIS/RTOS2/FreeRTOS/Source/cmsis_os2.c(1612): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+      portYIELD_FROM_ISR (yield);
+                                ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/CMSIS/RTOS2/FreeRTOS/Source/cmsis_os2.c(1744): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        portYIELD_FROM_ISR (yield);
+                                  ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/CMSIS/RTOS2/FreeRTOS/Source/cmsis_os2.c(1785): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        portYIELD_FROM_ISR (yield);
+                                  ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/CMSIS/RTOS2/FreeRTOS/Source/cmsis_os2.c(2156): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+          portYIELD_FROM_ISR (yield);
+                                    ^
+16 warnings generated.
+compiling cmsis_os2.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_rcc.c...
+compiling freertos_evr.c...
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/event_groups.c(63): warning: padding size of 'struct EventGroupDef_t' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct EventGroupDef_t
+               ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/event_groups.c(37): warning: In file included from...
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/include\FreeRTOS.h(1220): warning: padding size of 'struct xSTATIC_EVENT_GROUP' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct xSTATIC_EVENT_GROUP
+               ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/event_groups.c(255): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        portYIELD_WITHIN_API();
+                                              ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/event_groups.c(403): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        portYIELD_WITHIN_API();
+                                              ^
+4 warnings generated.
+compiling event_groups.c...
+compiling list.c...
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/src/stm32f10x_tim.c(23): warning: In file included from...
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc\stm32f10x_tim.h(51): warning: padding size of 'TIM_TimeBaseInitTypeDef' with 1 byte to alignment boundary [-Wpadded]
+typedef struct
+        ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/src/stm32f10x_tim.c(726): warning: implicit conversion loses integer precision: 'unsigned int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+             TIM_BDTRInitStruct->TIM_Break | TIM_BDTRInitStruct->TIM_BreakPolarity |
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/src/stm32f10x_tim.c(1983): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  tmp = CCER_CCE_Set << TIM_Channel;
+      ~ ~~~~~~~~~~~~~^~~~~~~~~~~~~~
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/src/stm32f10x_tim.c(2013): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  tmp = CCER_CCNE_Set << TIM_Channel;
+      ~ ~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/src/stm32f10x_tim.c(2058): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  tmp1 = CCER_CCE_Set << (uint16_t)TIM_Channel;
+       ~ ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+5 warnings generated.
+compiling stm32f10x_tim.c...
+compiling port.c...
+compiling heap_4.c...
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/queue.c(281): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                        queueYIELD_IF_USING_PREEMPTION();
+                                                                        ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/queue.c(127): warning: padding struct 'struct QueueDefinition' with 1 byte to align 'uxQueueNumber' [-Wpadded]
+                UBaseType_t uxQueueNumber;
+                            ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/queue.c(97): warning: padding size of 'struct QueueDefinition' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct QueueDefinition          /* The old naming convention is used to prevent breaking kernel aware debuggers. */
+               ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/queue.c(36): warning: In file included from...
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/include\FreeRTOS.h(1199): warning: padding struct 'struct xSTATIC_QUEUE' with 1 byte to align 'uxDummy8' [-Wpadded]
+                UBaseType_t uxDummy8;
+                            ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/include\FreeRTOS.h(1176): warning: padding size of 'struct xSTATIC_QUEUE' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct xSTATIC_QUEUE
+               ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/queue.c(845): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                                        queueYIELD_IF_USING_PREEMPTION();
+                                                                                        ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/queue.c(858): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                                queueYIELD_IF_USING_PREEMPTION();
+                                                                                ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/queue.c(927): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                        portYIELD_WITHIN_API();
+                                                              ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/queue.c(1323): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                                queueYIELD_IF_USING_PREEMPTION();
+                                                                                ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/queue.c(1382): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                        portYIELD_WITHIN_API();
+                                                              ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/queue.c(1485): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                                queueYIELD_IF_USING_PREEMPTION();
+                                                                                ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/queue.c(1573): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                        portYIELD_WITHIN_API();
+                                                              ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/queue.c(1689): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                                queueYIELD_IF_USING_PREEMPTION();
+                                                                                ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/queue.c(1749): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                        portYIELD_WITHIN_API();
+                                                              ^
+14 warnings generated.
+compiling queue.c...
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/timers.c(36): warning: In file included from...
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/include\FreeRTOS.h(1112): warning: padding size of 'struct xSTATIC_TCB' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct xSTATIC_TCB
+               ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/timers.c(73): warning: padding size of 'struct tmrTimerControl' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct tmrTimerControl /* The old naming convention is used to prevent breaking kernel aware debuggers. */
+               ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/timers.c(36): warning: In file included from...
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/include\FreeRTOS.h(1249): warning: padding size of 'struct xSTATIC_TIMER' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct xSTATIC_TIMER
+               ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/timers.c(549): warning: function 'prvTimerTask' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/timers.c(628): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                        portYIELD_WITHIN_API();
+                                                              ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/timers.c(36): warning: In file included from...
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/include\FreeRTOS.h(1199): warning: padding struct 'struct xSTATIC_QUEUE' with 1 byte to align 'uxDummy8' [-Wpadded]
+                UBaseType_t uxDummy8;
+                            ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/include\FreeRTOS.h(1176): warning: padding size of 'struct xSTATIC_QUEUE' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct xSTATIC_QUEUE
+               ^
+7 warnings generated.
+compiling timers.c...
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(337): warning: no previous extern declaration for non-static variable 'pxCurrentTCB' [-Wmissing-variable-declarations]
+PRIVILEGED_DATA TCB_t * volatile pxCurrentTCB = NULL;
+                                 ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(337): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+PRIVILEGED_DATA TCB_t * volatile pxCurrentTCB = NULL;
+                ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(252): warning: padding size of 'struct tskTaskControlBlock' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct tskTaskControlBlock                      /* The old naming convention is used to prevent breaking kernel aware debuggers. */
+               ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(38): warning: In file included from...
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/include\FreeRTOS.h(1112): warning: padding size of 'struct xSTATIC_TCB' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct xSTATIC_TCB
+               ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(1134): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                prvAddTaskToReadyList( pxNewTCB );
+                                                 ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(1146): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        taskYIELD_IF_USING_PREEMPTION();
+                                                       ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(1243): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                portYIELD_WITHIN_API();
+                                                      ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(1328): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        portYIELD_WITHIN_API();
+                                              ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(1373): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        portYIELD_WITHIN_API();
+                                              ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(1675): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                        prvAddTaskToReadyList( pxTCB );
+                                                                      ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(1684): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                        taskYIELD_IF_USING_PREEMPTION();
+                                                                       ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(1773): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                portYIELD_WITHIN_API();
+                                                      ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(1871): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                        prvAddTaskToReadyList( pxTCB );
+                                                                      ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(1879): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                                taskYIELD_IF_USING_PREEMPTION();
+                                                                               ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(1952): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                        prvAddTaskToReadyList( pxTCB );
+                                                                      ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(2223): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                        prvAddTaskToReadyList( pxTCB );
+                                                                      ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(2285): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                        taskYIELD_IF_USING_PREEMPTION();
+                                                                       ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(39): warning: In file included from...
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/include/task.h(143): warning: padding struct 'struct xTASK_STATUS' with 3 bytes to align 'uxCurrentPriority' [-Wpadded]
+        UBaseType_t uxCurrentPriority;  /* The priority at which the task was running (may be inherited) when the structure was populated. */
+                    ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/include/task.h(137): warning: padding size of 'struct xTASK_STATUS' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct xTASK_STATUS
+               ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(2729): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        taskSWITCH_DELAYED_LISTS();
+                                                  ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(2794): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                        prvAddTaskToReadyList( pxTCB );
+                                                                      ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(3030): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                taskCHECK_FOR_STACK_OVERFLOW();
+                                              ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(3041): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                taskSELECT_HIGHEST_PRIORITY_TASK(); /*lint !e9079 void * is used as this macro is used with timers and co-routines too.  Alignment is known to be fine as the type of the pointer stored and retrieved is the same. */
+                                                  ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(3163): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                prvAddTaskToReadyList( pxUnblockedTCB );
+                                                       ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(3241): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        prvAddTaskToReadyList( pxUnblockedTCB );
+                                               ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(3434): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                taskYIELD();
+                                           ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(3393): warning: function 'prvIdleTask' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(3773): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        listGET_OWNER_OF_NEXT_ENTRY( pxFirstTCB, pxList ); /*lint !e9079 void * is used as this macro is used with timers and co-routines too.  Alignment is known to be fine as the type of the pointer stored and retrieved is the same. */
+                                                                         ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(3781): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                listGET_OWNER_OF_NEXT_ENTRY( pxNextTCB, pxList ); /*lint !e9079 void * is used as this macro is used with timers and co-routines too.  Alignment is known to be fine as the type of the pointer stored and retrieved is the same. */
+                                                                                ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(4059): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                        prvAddTaskToReadyList( pxMutexHolderTCB );
+                                                                                 ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(4149): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                        prvAddTaskToReadyList( pxTCB );
+                                                                      ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(4261): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                                prvAddTaskToReadyList( pxTCB );
+                                                                              ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(4656): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                        portYIELD_WITHIN_API();
+                                                              ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(4729): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                        portYIELD_WITHIN_API();
+                                                              ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(4834): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                                default:
+                                ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(4850): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                prvAddTaskToReadyList( pxTCB );
+                                                              ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(4875): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                        taskYIELD_IF_USING_PREEMPTION();
+                                                                       ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(4967): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                                default:
+                                ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(4987): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                        prvAddTaskToReadyList( pxTCB );
+                                                                      ^
+C:/Users/SnizhokMA/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.3.1/Source/tasks.c(5075): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                                        prvAddTaskToReadyList( pxTCB );
+                                                                      ^
+39 warnings generated.
+compiling tasks.c...
+linking...
+.\Objects\lab3.axf: Error: L6200E: Symbol osKernelInitialize multiply defined (by rt_cmsis.o and cmsis_os2.o).
+.\Objects\lab3.axf: Error: L6200E: Symbol osTimerStart multiply defined (by rt_cmsis.o and cmsis_os2.o).
+.\Objects\lab3.axf: Error: L6200E: Symbol osKernelStart multiply defined (by rt_cmsis.o and cmsis_os2.o).
+.\Objects\lab3.axf: Error: L6200E: Symbol __user_perthread_libspace multiply defined (by clib_arm.o and rtx_conf_cm.o).
+.\Objects\lab3.axf: Error: L6200E: Symbol _mutex_acquire multiply defined (by clib_arm.o and rtx_conf_cm.o).
+.\Objects\lab3.axf: Error: L6200E: Symbol _mutex_initialize multiply defined (by clib_arm.o and rtx_conf_cm.o).
+.\Objects\lab3.axf: Error: L6200E: Symbol _mutex_release multiply defined (by clib_arm.o and rtx_conf_cm.o).
+.\Objects\lab3.axf: Error: L6200E: Symbol SysTick_Handler multiply defined (by hal_cm3.o and cmsis_os2.o).
+.\Objects\lab3.axf: Error: L6200E: Symbol osDelay multiply defined (by rt_cmsis.o and cmsis_os2.o).
+.\Objects\lab3.axf: Error: L6200E: Symbol osThreadGetId multiply defined (by rt_cmsis.o and cmsis_os2.o).
+.\Objects\lab3.axf: Error: L6200E: Symbol osTimerDelete multiply defined (by rt_cmsis.o and cmsis_os2.o).
+.\Objects\lab3.axf: Error: L6200E: Symbol osMutexDelete multiply defined (by rt_cmsis.o and cmsis_os2.o).
+.\Objects\lab3.axf: Error: L6200E: Symbol osMutexRelease multiply defined (by rt_cmsis.o and cmsis_os2.o).
+.\Objects\lab3.axf: Error: L6200E: Symbol osSemaphoreDelete multiply defined (by rt_cmsis.o and cmsis_os2.o).
+.\Objects\lab3.axf: Error: L6200E: Symbol osSemaphoreRelease multiply defined (by rt_cmsis.o and cmsis_os2.o).
+.\Objects\lab3.axf: Error: L6200E: Symbol osThreadExit multiply defined (by rt_cmsis.o and cmsis_os2.o).
+.\Objects\lab3.axf: Error: L6200E: Symbol osThreadGetPriority multiply defined (by rt_cmsis.o and cmsis_os2.o).
+.\Objects\lab3.axf: Error: L6200E: Symbol osThreadSetPriority multiply defined (by rt_cmsis.o and cmsis_os2.o).
+.\Objects\lab3.axf: Error: L6200E: Symbol osThreadTerminate multiply defined (by rt_cmsis.o and cmsis_os2.o).
+.\Objects\lab3.axf: Error: L6200E: Symbol osThreadYield multiply defined (by rt_cmsis.o and cmsis_os2.o).
+.\Objects\lab3.axf: Error: L6200E: Symbol osTimerStop multiply defined (by rt_cmsis.o and cmsis_os2.o).
+.\Objects\lab3.axf: Error: L6200E: Symbol SVC_Handler multiply defined (by hal_cm3.o and port.o).
+.\Objects\lab3.axf: Error: L6200E: Symbol PendSV_Handler multiply defined (by hal_cm3.o and port.o).
+Not enough information to list image symbols.
+Not enough information to list load addresses in the image map.
+Finished: 2 information, 0 warning and 23 error messages.
+".\Objects\lab3.axf" - 23 Error(s), 97 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: RTOS Version: 1.0.0
+   * Component: RTOS2 Version: 2.1.3
+   * Component: CORE Version: 5.4.0
+   * Component: Keil RTX Version: 4.82.0
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS-FreeRTOS.10.3.1.pack
+                ARM.CMSIS-FreeRTOS.10.3.1
+                Bundle of FreeRTOS for Cortex-M and Cortex-A
+   * Component: Config Variant: CMSIS RTOS2 Version: 10.3.1
+   * Component: Core Variant: Cortex-M Version: 10.3.1
+   * Component: Event Groups Version: 10.3.1
+   * Component: Heap Variant: Heap_4 Version: 10.3.1
+   * Component: Timers Version: 10.3.1
+   * Component: FreeRTOS Variant: Cortex-M Version: 10.3.1
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.3.0.pack
+                Keil.STM32F1xx_DFP.2.3.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: GPIO Version: 1.3
+   * Component: Startup Version: 1.0.0
+   * Component: Framework Version: 3.5.1
+   * Component: GPIO Version: 3.5.0
+   * Component: RCC Version: 3.5.0
+   * Component: TIM Version: 3.5.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Device\STM32F103C8
+  .\RTE\RTOS
+  .\RTE\_Target_1
+  C:\Users\SnizhokMA\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.3.1\CMSIS\RTOS2\FreeRTOS\Include
+  C:\Users\SnizhokMA\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.3.1\Source\include
+  C:\Users\SnizhokMA\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.3.1\Source\portable\GCC\ARM_CM3
+  C:\Users\SnizhokMA\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\SnizhokMA\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS2\Include
+  C:\Users\SnizhokMA\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS\RTX\INC
+  C:\Users\SnizhokMA\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include
+  C:\Users\SnizhokMA\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc
+  C:\Users\SnizhokMA\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\RTE_Driver
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ::CMSIS:RTOS:1.0.0 (API)
+
+   * Component: ::CMSIS:RTOS2:2.1.3 (API)
+      Include file:  CMSIS\RTOS2\Include\cmsis_os2.h
+
+   * Component: ARM.FreeRTOS::RTOS:Config:CMSIS RTOS2:10.3.1
+      Include file:  CMSIS\RTOS2\FreeRTOS\Config\ARMCM\FreeRTOSConfig.h
+
+   * Component: ARM.FreeRTOS::RTOS:Core:Cortex-M:10.3.1
+      Source file:   Source\queue.c
+      Source file:   Source\list.c
+      Source file:   Source\tasks.c
+      Include file:  Source\include\task.h
+      Include file:  Source\include\FreeRTOS.h
+      Include file:  Source\include\queue.h
+      Include file:  Source\include\semphr.h
+      Source file:   Source\portable\GCC\ARM_CM3\port.c
+      Source file:   CMSIS\RTOS2\FreeRTOS\Source\freertos_evr.c
+
+   * Component: ARM.FreeRTOS::RTOS:Event Groups:10.3.1
+      Include file:  Source\include\event_groups.h
+      Source file:   Source\event_groups.c
+
+   * Component: ARM.FreeRTOS::RTOS:Heap:Heap_4:10.3.1
+      Source file:   Source\portable\MemMang\heap_4.c
+
+   * Component: ARM.FreeRTOS::RTOS:Timers:10.3.1
+      Include file:  Source\include\timers.h
+      Source file:   Source\timers.c
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: ARM::CMSIS:RTOS:Keil RTX:4.82.0
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\MemPool.c
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\Mutex.c
+      Source file:   CMSIS\RTOS\RTX\Templates\RTX_Conf_CM.c
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\Semaphore.c
+      Include file:  CMSIS\RTOS\RTX\INC\cmsis_os.h
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\main.c
+      Include file:  CMSIS\RTOS\RTX\UserCodeTemplates\osObjects.h
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\MsgQueue.c
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\Thread.c
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\MailQueue.c
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\Timer.c
+      Library file:  CMSIS\RTOS\RTX\LIB\ARM\RTX_CM3.lib
+      Source file:   CMSIS\RTOS\RTX\SRC\ARM\SVC_Table.s
+
+   * Component: ARM::CMSIS:RTOS2:FreeRTOS:Cortex-M:10.3.1
+      Source file:   CMSIS\RTOS2\FreeRTOS\Source\os_systick.c
+      Include file:  CMSIS\RTOS2\FreeRTOS\Include\freertos_mpool.h
+      Source file:   CMSIS\RTOS2\FreeRTOS\Source\ARM\clib_arm.c
+      Source file:   CMSIS\RTOS2\FreeRTOS\Source\cmsis_os2.c
+
+   * Component: Keil::Device:GPIO:1.3
+      Source file:   RTE_Driver\GPIO_STM32F10x.c
+      Include file:  RTE_Driver\GPIO_STM32F10x.h
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+      Source file:   Device\Source\ARM\startup_stm32f10x_md.s
+      Source file:   Device\Source\system_stm32f10x.c
+      Include file:  RTE_Driver\Config\RTE_Device.h
+
+   * Component: Keil::Device:StdPeriph Drivers:Framework:3.5.1
+      Source file:   Device\StdPeriph_Driver\src\misc.c
+      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_conf.h
+      Include file:  Device\StdPeriph_Driver\templates\stm32f10x_it.h
+      Include file:  Device\StdPeriph_Driver\inc\misc.h
+      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_it.c
+
+   * Component: Keil::Device:StdPeriph Drivers:GPIO:3.5.0
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_gpio.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_gpio.h
+
+   * Component: Keil::Device:StdPeriph Drivers:RCC:3.5.0
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_rcc.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_rcc.h
+
+   * Component: Keil::Device:StdPeriph Drivers:TIM:3.5.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_tim.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_tim.c
+Target not created.
+Build Time Elapsed:  00:00:08
+</pre>
+</body>
+</html>
